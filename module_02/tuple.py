@@ -6,5 +6,5 @@ print(f'Przedostatni element tego zakresu to: {numbers[-2]}')
 print(f'Co szosty element zaczynajac od 4: {numbers[4::6]}')
 print(f'Co trzeci element licząc od końca: {numbers[-1:1:-3]}')
 
-print(f'Srednia ostatnich 10 cyfr to: {int(sum(numbers[-10::1]) / 10)}')
+print(f'Srednia ostatnich 10 cyfr to: {int(sum(numbers[-10::]) / 10)}')
 

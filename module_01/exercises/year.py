@@ -1,5 +1,6 @@
 name = input('Jak masz na imie?: ')
-born = int(input('Podaj swoj wiek: '))
+age = int(input('Podaj swoj wiek: '))
+born = current_year - age
 current_year = 2021
 
 print(f'Witaj {name}, miło Cie poznać. Urodziłeś się w {born} roku.')

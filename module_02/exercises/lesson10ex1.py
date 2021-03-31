@@ -1,4 +1,4 @@
-numbers = list(range(1,100))
+numbers = list(range(1,101))
 
 div_by_4 = 0
 div_by_4_numbers = []

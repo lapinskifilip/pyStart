@@ -1,23 +1,31 @@
-eng_dictionary = {
+pol_en = {
     'dom': 'house',
     'kuchnia': 'kitchen',
     'ogrod': 'garden',
     'lazienka': 'bathroom'
 }
 
-translate = input('Na jaki jezyk chcesz przetlumaczyc? [PL/EN]: ').lower()
-if translate != "pl" and translate != "en":
-    print('Nie znam tego jezyka!')
-    quit()
-word = input('Jakie slowo chcesz przetlumaczyc: ').lower()
-if word not in eng_dictionary:
-    print('Nie mam takiego slowa w slowniku!')
-    quit()
+en_pol = {}
 
-for pl, eng in eng_dictionary.items():
-    if translate == "pl" and word in pl:
-        print(f'{pl} po angielsku to {eng}')
+
+for pl, en in pol_en.items():
+    en_pol[en] = pl
+
+pick = input('Jakiego slownika chcesz uzyc? \n [1. POL-EN / 2. EN-POL]: ')
+if pick not in ['1', '2']:
+    print('Error')
+if pick == '1':
+    word = input('Wybrales slownik POL-EN. Podaj polskie slowo: ').lower()
+    if word not in pol_en:
+        print('Nie ma takiego slowa w slowniku')
         quit()
-    if translate == "en" and word in eng:
-        print(f'{eng} in polish is {pl}')
+    else:
+        print(f'To slowo znaczy w jezyku Angielskim to: {pol_en[word]}')
+else:
+    word = input('Wybrales slownik EN-POL. Podaj angielskie slowo: ').lower()
+    if word not in en_pol:
+        print('Nie ma takiego slowa w slowniku')
         quit()
+    else:
+        print(f'To slowo znaczy w jezyku Angielskim to: {en_pol[word]}')
+
